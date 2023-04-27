@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  max-width: 20em;
+  width: 100%;
+  padding: 50px;
+  background-color: #fff;
+  font-family: "Comfortaa", cursive;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 7.6px 5px;
+}
+
+.fulldate {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(97, 100, 115, 255);
+}
+.date {
+  display: flex;
+  column-gap: 10px;
+}
+
+.text-dark {
+  font-weight: 600;
+}
+.date_num {
+  font-size: 2.2rem;
+}
+
+.month_year {
+  font-size: 15px;
+}
+
+.week {
+  margin: auto 0;
+}
+.main-list {
+  margin: 20px 0;
+  height: 450px;
+  max-height: 28em;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.main-list::-webkit-scrollbar {
+  display: none;
+}
+.lists {
+  display: flex;
+  justify-content: space-between;
+
+  transition: 0.2s ease-in-out;
+}
+
+.lists:hover {
+  scale: 0.97;
+}
+.items {
+  margin: auto 0;
+  /* font-size: 18px; */
+  margin: 26px 0;
+}
+
+.items-gray {
+  color: gray;
+}
+
+.items-black {
+  color: rgba(97, 100, 115, 255);
+  font-weight: 600;
+}
+
+.check {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s;
+  margin: auto 0;
+  cursor: pointer;
+  border: 3px solid lightgrey;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.check:checked {
+  background-image: url("./components/assets/icon.png");
+  background-size: cover;
+  border: 0;
+}
+
+.addtodo {
+  position: absolute;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: #5ad3a0;
+  color: #377c5f;
+  border: 0;
+  bottom: -7.5%;
+  left: 41%;
+  transition: 0.4s ease-in-out;
+}
+.addtodo:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.todo-input {
+  display: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  transition: 0.5s;
+  outline: none;
+}
+
+.todo-input:focus {
+  border: 1px solid #ccc;
+}
+
+.delete-task {
+  display: none;
+  text-align: center;
+  margin-top: 15px;
+  color: rgb(155, 154, 154);
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 1366px) {
+  .items {
+    margin: 26px 0;
+  }
+}
+@media (max-width: 1300px) {
+  .card {
+    padding: 25px;
+  }
+  .items {
+    margin: 26px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .items {
+    margin: 23px 0;
+    font-size: 16px;
+  }
+  .addtodo {
+    width: 75px;
+    height: 75px;
+    bottom: -7%;
+    left: 40%;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    padding: 20px;
+  }
+  .items {
+    margin: 22px 0;
+  }
+}
